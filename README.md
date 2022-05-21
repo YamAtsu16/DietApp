@@ -1,24 +1,52 @@
-# README
+# アプリケーションについて
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## アプリケーション名	
+  減量記録アプリ（仮）
+## アプリケーション概要
+  その日に食べたものの合計カロリーや栄養素、体重を投稿することができ、毎日の食事や身体のコンディションを記録することができる。
+## URL
+  ※ デプロイ後、記載予定
+## テスト用アカウント
+  ※ ユーザー管理機能実装後、記載予定
+## 利用方法
+### 食事管理
+  １：ユーザー登録を行う。  
+  ２：投稿ページで各項目を入力し、保存ボタンを押す。  
+  ３：保存が完了すると、一覧ページに記録が反映される。  
+  ４：一覧ページから投稿した記録の詳細ページへ遷移し、記録に関する詳細情報を確認する。  
+### 体重管理
+  １：ユーザー登録を行う。  
+  ２：体重管理一覧ページへ遷移する。  
+  ３：体重記録投稿ページへ遷移する。  
+  ４：各項目を入力し、保存ボタンを押す。  
+  ５：保存が完了すると、一覧ページに記録が反映される。  
+### マイメニュー機能
+  １：ユーザー登録を行う。  
+  ２：マイメニュー一覧ページへ遷移する。  
+  ３：マイメニュー投稿ページへ遷移する。  
+  ４：各項目を入力し、保存ボタンを押す。  
+  ５：保存が完了すると、一覧ページに記録が反映される。
+## アプリケーションを作成した背景
+  私は趣味がボディメイクで、筋トレや食事管理を行なっている。食事管理をするために、カロリー計算や日々の食事を記録をするための使いやすいアプリケーションが必要だと思い、このアプリケーションを開発することにした。
+## 洗い出した要件
+こちらの[要件定義書](1IKgBYdU9itBpVNo6cb4urZDtvRVYeDn5MKTrXzAaYRc/edit#gid=982722306)に記載
+## 実装した機能についての画像やGIFおよびその説明
+  ※ 実装完了後、記載予定
+## 実装予定の機能
+  ※ 実装が始まり次第、随時更新
+## データベース設計
+  [![Image from Gyazo](https://i.gyazo.com/1de4d7ad528afe723ba6100550fb5e14.png)](https://gyazo.com/1de4d7ad528afe723ba6100550fb5e14)
+## 画面遷移図
+  [![Image from Gyazo](https://i.gyazo.com/2f82b0fd3eef4b9f6a06df95213f8c9a.png)](https://gyazo.com/2f82b0fd3eef4b9f6a06df95213f8c9a)
+## 開発環境	
+  - Ruby
+  - Ruby on Rails
+  - JavaScript
+  - HTML/CSS
+  - MySQL
+  - Github
+  - Visual Studio Code
+## ローカルでの動作方法
+  ※ 実装後、記載予定
+## 工夫したポイント
+  ※ 実装後、随時更新予定
