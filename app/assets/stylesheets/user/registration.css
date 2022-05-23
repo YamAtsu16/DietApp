@@ -1,0 +1,36 @@
+.registration-main{
+  height: 100vh;
+  width: 100vw;
+}
+
+.registration-title{
+}
+
+.registration-form{
+  height: 100%;
+  width: 100%;
+}
+
+.form-text-wrap{
+  margin-top: 5px;
+}
+
+.form-text{
+  width: 300px;
+}
+
+.input-form{
+  width: 300px;
+}
+
+.input-birth-wrap{
+  display: flex;
+}
+
+.registration-submit{
+  margin-top: 30px;
+}
+
+.registration-footer-btn{
+  margin-top: 10px;
+}
