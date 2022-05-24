@@ -1,7 +1,7 @@
-トップページ
-  <%= current_user.name %>
-  <%= link_to "ログアウト", destroy_user_session_path, method: :delete%>
+<%= render "shared/header" %>
 
-<%= month_calendar do |date| %>
-  <%= date.day %>
-<% end %>
+<div class="">
+  <%= month_calendar do |date| %>
+    <%= date.day %>
+  <% end %>
+</div>
