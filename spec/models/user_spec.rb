@@ -26,16 +26,6 @@ RSpec.describe User, type: :model do
       @user.valid?
       expect(@user.errors.full_messages).to include("パスワードを入力してください")
     end
-    it '生年月日が空だと登録できない' do
-      @user.birthday = ""
-      @user.valid?
-      expect(@user.errors.full_messages).to include("生年月日を入力してください")
-    end
-    it '年齢が空だと登録できない' do
-      @user.age = ""
-      @user.valid?
-      expect(@user.errors.full_messages).to include("年齢を入力してください")
-    end
     it 'メールアドレスは@を含まないと登録できない' do
       @user.email = "email.com"
       @user.valid?

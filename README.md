@@ -35,7 +35,7 @@
 ## 実装予定の機能
   ※ 実装が始まり次第、随時更新
 ## データベース設計
-  [![Image from Gyazo](https://i.gyazo.com/f4093197bdf28de05ab0b5e234b3ff7d.png)](https://gyazo.com/f4093197bdf28de05ab0b5e234b3ff7d)
+  [![Image from Gyazo](https://i.gyazo.com/ea68b5df36f3d189edc4392e2d5e8018.png)](https://gyazo.com/ea68b5df36f3d189edc4392e2d5e8018)
 ## 画面遷移図
   [![Image from Gyazo](https://i.gyazo.com/2f82b0fd3eef4b9f6a06df95213f8c9a.png)](https://gyazo.com/2f82b0fd3eef4b9f6a06df95213f8c9a)
 ## 開発環境	
