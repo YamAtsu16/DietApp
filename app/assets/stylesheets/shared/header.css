@@ -1,0 +1,37 @@
+.header{
+  height: 80px;
+  background-color: lightgoldenrodyellow;
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-left{
+  height: 80px;
+  line-height: 80px;
+  display: flex;
+
+}
+
+.title-logo{
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.menu-lists{
+  display: flex;
+}
+
+.menu{
+  margin-left: 20px;
+}
+
+.header-right{
+  height: 80px;
+  line-height: 80px;
+  display: flex;
+}
+
+.login-user{
+  margin-right: 20px;
+}
