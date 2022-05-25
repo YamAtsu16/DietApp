@@ -1,7 +1,22 @@
 <%= render "shared/header" %>
 
-<div class="">
-  <%= month_calendar do |date| %>
-    <%= date.day %>
+<div class="record-main">
+  <div class="record-dates">
+    <%= month_calendar do |date| %>
+      <%# リンクから各記録の詳細ページへ遷移 %>
+      <%= link_to date.day, "#" %>
+  </div>
+  <%# 記録の有無で表示切り替え %>
+  <div class="record-carories">
+    <%# 合計カロリーを表示 %>
+    <%= "総摂取カロリー" %>
+  </div>
+  <div class="record-pfc">
+    <%# PFCの合計値を表示 %>
+    P <%= 100 %>
+    F <%= 100 %>
+    C <%= 100 %>
+  </div>
+  <%# #################### %>
   <% end %>
 </div>
