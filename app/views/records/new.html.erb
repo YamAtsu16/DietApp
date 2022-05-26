@@ -1,0 +1,9 @@
+<%= render "shared/header" %>
+
+<div class="">
+  <%= @today %>
+  <%= form_with model: @record, local: true do |f| %>
+    <%= f.hidden_field :start_time, :value => @today, class:"", id:"" %>
+    <%= f.submit "新規作成" ,class:"" %>
+  <% end %>
+</div>
