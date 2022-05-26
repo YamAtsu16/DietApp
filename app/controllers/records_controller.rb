@@ -3,6 +3,7 @@ class RecordsController < ApplicationController
   before_action :set_beginning_of_week
 
   def index
+    @record = Record.find_by(start_time: Date.today)
   end
 
   def new
@@ -13,7 +14,7 @@ class RecordsController < ApplicationController
   def create
     @record = Record.new(record_params)
     @record.save
-    redirect_to root_path
+    redirect_to record_meals
   end
 
   private

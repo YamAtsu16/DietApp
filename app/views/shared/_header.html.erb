@@ -5,7 +5,11 @@
     </div>
     <ul class="menu-lists">
       <li class="menu">
-        <%= link_to "登録", new_record_path %>
+        <% unless Record.exists?(start_time: Date.today)%>
+          <%= link_to "今日の記録", new_record_path %>
+        <% else %>
+          <%= link_to "今日の記録", record_meals_path(@record) %>
+        <% end %>
       </li>
       <li class="menu">
         <%= link_to "食事記録", root_path %>
