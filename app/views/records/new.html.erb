@@ -2,6 +2,7 @@
 
 <div class="">
   <%= @today %>
+  今日の記録がまだありません。今日の記録を作成しますか？
   <%= form_with model: @record, local: true do |f| %>
     <%= f.hidden_field :start_time, :value => @today, class:"", id:"" %>
     <%= f.submit "新規作成" ,class:"" %>
