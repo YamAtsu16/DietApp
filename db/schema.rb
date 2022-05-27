@@ -22,15 +22,14 @@ ActiveRecord::Schema.define(version: 2022_05_26_121956) do
     t.integer "carbo", null: false
     t.integer "volume", null: false
     t.bigint "user_id", null: false
-    t.bigint "record_id", null: false
+    t.date "record_date_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["record_id"], name: "index_meals_on_record_id"
+    t.index ["record_date_id"], name: "index_meals_on_record_date_id"
     t.index ["user_id"], name: "index_meals_on_user_id"
   end
 
-  create_table "records", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.date "start_time", null: false
+  create_table "records", primary_key: "start_time", id: :date, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "total_calorie", default: 0
     t.integer "total_protein", default: 0
     t.integer "total_fat", default: 0
@@ -54,7 +53,7 @@ ActiveRecord::Schema.define(version: 2022_05_26_121956) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "meals", "records"
+  add_foreign_key "meals", "records", column: "record_date_id", primary_key: "start_time"
   add_foreign_key "meals", "users"
   add_foreign_key "records", "users"
 end

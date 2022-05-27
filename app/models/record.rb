@@ -1,5 +1,7 @@
 class Record < ApplicationRecord
-  has_many :meals
+  self.primary_key = :start_time
+    
+  has_many :record_dates, class_name: "meal", foreign_key: "record_date_id"
   belongs_to :user
 
   validates :start_time, presence: true
