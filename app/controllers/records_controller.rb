@@ -8,13 +8,18 @@ class RecordsController < ApplicationController
 
   def new
     @record = Record.new
-    @today = Date.today
   end
 
   def create
     @record = Record.new(record_params)
     @record.save
-    redirect_to record_meals_path(@record)
+    redirect_to root_path
+  end
+
+  def show
+    @record = Record.find(params[:id])
+    @meal = Meal.new
+    @meals = @record.record_dates.all
   end
 
   private
