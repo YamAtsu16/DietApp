@@ -4,7 +4,7 @@ class Meal < ApplicationRecord
   belongs_to :eat_time
 
   belongs_to :user
-  belongs_to :record_date, class_name: "record", optional: true
+  belongs_to :record_date, class_name: "Record", optional: true
 
   validates :category_id, :eat_time_id, :food, :volume, :calorie, :protein, :fat, :carbo, presence: true
   validates :calorie, :protein, :fat, :carbo, :volume, format: {with: /\A[0-9]+\z/}
