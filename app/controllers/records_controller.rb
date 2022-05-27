@@ -12,8 +12,12 @@ class RecordsController < ApplicationController
 
   def create
     @record = Record.new(record_params)
-    @record.save
-    redirect_to root_path
+    if Record.exists?(start_time: @record.start_time)
+      redirect_to record_path(@record)
+    else
+      @record.save
+      redirect_to record_path(@record)
+    end
   end
 
   def show
