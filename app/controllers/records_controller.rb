@@ -3,7 +3,7 @@ class RecordsController < ApplicationController
   before_action :set_beginning_of_week
 
   def index
-    @record = Record.find_by(start_time: Date.today)
+    @records = Record.all
   end
 
   def new
