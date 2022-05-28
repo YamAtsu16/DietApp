@@ -1,20 +1,19 @@
 class MealsController < ApplicationController
 
   def create
-    binding.pry
-    record = Record.find(params[:id])
-    meal = Meal.new(meal_params)
+    @meal = Meal.new(meal_params)
     if @meal.save
-      redirect_to "/records/#{meal.record_date}"
+      redirect_to record_path(@meal.record_date_id)
     else
-      render "record/show"
+      @record = Record.find(params[:record_id])
+      redirect_to record_path(@record)
     end
   end
 
   private
 
   def meal_params
-    params.require(:meal).permit(:category_id, :eat_time_id, :food, :calorie, :protein, :fat, :carbo, :volume).merge(user_id: current_user.id, record_date_id: @record.id)
+    params.require(:meal).permit(:category_id, :eat_time_id, :food, :calorie, :protein, :fat, :carbo, :volume).merge(user_id: current_user.id, record_date_id: params[:record_id])
   end
 
 end
