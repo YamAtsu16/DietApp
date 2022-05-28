@@ -5,12 +5,10 @@
     <%= date.day %>
     <% records.each do |data| %>
       <div class="total-calories">
-        <%= link_to "#{data.total_calorie} kcal", data %>
+        <%= "#{data.total_calorie} kcal" %>
       </div>
       <div class="total-pfc">
-        <%= link_to "P #{data.total_protein}", data %>
-        <%= link_to "F #{data.total_fat}", data %>
-        <%= link_to "C #{data.total_carbo}", data %>
+        <%= link_to "詳細を見る", data %>
       </div>
     <% end%>
   <% end %>
