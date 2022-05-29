@@ -27,7 +27,9 @@
           <li class="meal-list">
             <%= "#{meal.category.name}（#{meal.eat_time.name}）" %><br>
             <%= meal.food %><br>
-            <%= "#{meal.volume} g" %><br>
+            <%= "#{meal.volume} g" %><br><br>
+            <%= link_to "編集", "#" %>
+            <%= link_to "削除", "#" %>
           </li>
         <% end %>
       </ul>
