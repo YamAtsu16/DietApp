@@ -1,10 +1,10 @@
 <%= render "shared/header" %>
 
 <div class ="record-show-main">
-  <%= render "shared/meal_form" %>
   <div class="meal-index">
     <div class="total-graph-area">
       <div class="total-graph__left">
+        <%= link_to "追加", new_record_meal_path(@record.id)  %>
       </div>
       <div class="total-graph__right">
         <div class="total-data">Total カロリー
@@ -21,18 +21,130 @@
         </div>
       </div>
     </div>
+
     <div class="meals-area">
+
+      <div class="meals-category">
+        起床時
+      </div>
       <ul class="meal-lists">
         <% @meals.each do |meal| %>
-          <li class="meal-list">
-            <%= "#{meal.category.name}（#{meal.eat_time.name}）" %><br>
-            <%= meal.food %><br>
-            <%= "#{meal.volume} g" %><br><br>
-            <%= link_to "編集", "#" %>
-            <%= link_to "削除", "#" %>
-          </li>
+          <% if meal.category.id == 2 %>
+            <li class="meal-list">
+              <%= meal.food %><br>
+              <%= "#{meal.volume} g" %><br><br>
+              <%= link_to "編集", "#" %>
+              <%= link_to "削除", record_meal_path(meal), method: :delete %>
+            </li>
+          <% end %>
         <% end %>
       </ul>
+      <div class="meals-category">
+        朝食
+      </div>
+      <ul class="meal-lists">
+        <% @meals.each do |meal| %>
+          <% if meal.category.id == 3 %>
+            <li class="meal-list">
+              <%= meal.food %><br>
+              <%= "#{meal.volume} g" %><br><br>
+              <%= link_to "編集", "#" %>
+              <%= link_to "削除", record_meal_path(meal), method: :delete %>
+            </li>
+          <% end %>
+        <% end %>
+      </ul>
+      <div class="meals-category">
+        昼食
+      </div>
+      <ul class="meal-lists">
+        <% @meals.each do |meal| %>
+          <% if meal.category.id == 4 %>
+            <li class="meal-list">
+              <%= meal.food %><br>
+              <%= "#{meal.volume} g" %><br><br>
+              <%= link_to "編集", "#" %>
+              <%= link_to "削除", record_meal_path(meal), method: :delete %>
+            </li>
+          <% end %>
+        <% end %>
+      </ul>
+      <div class="meals-category">
+        夕食
+      </div>
+      <ul class="meal-lists">
+        <% @meals.each do |meal| %>
+          <% if meal.category.id == 5 %>
+            <li class="meal-list">
+              <%= meal.food %><br>
+              <%= "#{meal.volume} g" %><br><br>
+              <%= link_to "編集", "#" %>
+              <%= link_to "削除", record_meal_path(meal), method: :delete %>
+            </li>
+          <% end %>
+        <% end %>
+      </ul>
+      <div class="meals-category">
+        夜食
+      </div>
+      <ul class="meal-lists">
+        <% @meals.each do |meal| %>
+          <% if meal.category.id == 6 %>
+            <li class="meal-list">
+              <%= meal.food %><br>
+              <%= "#{meal.volume} g" %><br><br>
+              <%= link_to "編集", "#" %>
+              <%= link_to "削除", record_meal_path(meal), method: :delete %>
+            </li>
+          <% end %>
+        <% end %>
+      </ul>
+      <div class="meals-category">
+        就寝前
+      </div>
+      <ul class="meal-lists">
+        <% @meals.each do |meal| %>
+          <% if meal.category.id == 7 %>
+            <li class="meal-list">
+              <%= meal.food %><br>
+              <%= "#{meal.volume} g" %><br><br>
+              <%= link_to "編集", "#" %>
+              <%= link_to "削除", record_meal_path(meal), method: :delete %>
+            </li>
+          <% end %>
+        <% end %>
+      </ul>
+      <div class="meals-category">
+        間食
+      </div>
+      <ul class="meal-lists">
+        <% @meals.each do |meal| %>
+          <% if meal.category.id == 8 %>
+            <li class="meal-list">
+              <%= meal.food %><br>
+              <%= "#{meal.volume} g" %><br><br>
+              <%= link_to "編集", "#" %>
+              <%= link_to "削除", record_meal_path(meal), method: :delete %>
+            </li>
+          <% end %>
+        <% end %>
+      </ul>
+      <div class="meals-category">
+        その他
+      </div>
+      <ul class="meal-lists">
+        <% @meals.each do |meal| %>
+          <% if meal.category.id == 9 %>
+            <li class="meal-list">
+              <%= meal.food %><br>
+              <%= "#{meal.volume} g" %><br><br>
+              <%= link_to "編集", "#" %>
+              <%= link_to "削除", record_meal_path(meal), method: :delete %>
+            </li>
+          <% end %>
+        <% end %>
+      </ul>
+
     </div>
   </div>
 </div>
