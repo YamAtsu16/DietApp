@@ -1,5 +1,10 @@
 class MealsController < ApplicationController
 
+  def new
+    @record = Record.find(params[:record_id])
+    @meal = Meal.new
+  end
+
   def create
     @meal = Meal.new(meal_params)
     if @meal.save
@@ -7,7 +12,7 @@ class MealsController < ApplicationController
       redirect_to record_path(@meal.record_date_id)
     else
       @record = Record.find(params[:record_id])
-      redirect_to record_path(@record)
+      render :new
     end
   end
 
@@ -24,7 +29,6 @@ class MealsController < ApplicationController
   end
 
   def add_data
-    binding.pry
     record = Record.find(params[:record_id])
 
     record.total_calorie += @meal.calorie

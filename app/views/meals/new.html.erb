@@ -1,0 +1,61 @@
+<%= render "shared/header" %>
+<div class="meal-form-area">
+  <div class="record-date">
+    <%= @record.start_time %>
+  </div>
+  <%= form_with model: [@record, @meal], local: true do |f| %>
+    <%= render 'shared/error_messages', model: f.object %>
+  
+    <div class="meal-form-content">
+      <div class="meal-form__title">
+        分類
+      </div>
+      <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box" }) %>
+    </div>
+    <div class="meal-form-content">
+      <div class="meal-form__title">
+        摂取時間
+      </div>
+      <%= f.collection_select(:eat_time_id, EatTime.all, :id, :name, {}, {class:"select-box" }) %>
+    </div>
+    <div class="meal-form-content">
+      <div class="meal-form__title">
+        食品名
+      </div>
+      <%= f.text_field :food, class:"select-box" %>
+    </div>
+    <div class="meal-form-content">
+      <div class="meal-form__title">
+        摂取量
+      </div>
+      <%= f.text_field :volume, class:"select-box", placeholder: "g" %>
+    </div>
+    <div class="meal-form-content">
+      <div class="meal-form__title">
+        カロリー
+      </div>
+      <%= f.text_field :calorie, class:"select-box", placeholder: "kcal" %>
+    </div>
+    <div class="meal-form-content">
+      <div class="meal-form__title">
+        タンパク質
+      </div>
+      <%= f.text_field :protein, class:"select-box", placeholder: "g" %>
+    </div>
+    <div class="meal-form-content">
+      <div class="meal-form__title">
+        脂質
+      </div>
+      <%= f.text_field :fat, class:"select-box", placeholder: "g" %>
+    </div>
+    <div class="meal-form-content">
+      <div class="meal-form__title">
+        炭水化物
+      </div>
+      <%= f.text_field :carbo, class:"select-box", placeholder: "g" %>
+    </div>
+    <div class="meal-form-submit">
+      <%= f.submit "保存" ,class:"meal-form-submit-btn" %>
+    </div>
+  <% end %>
+</div>

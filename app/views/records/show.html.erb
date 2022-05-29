@@ -1,10 +1,10 @@
 <%= render "shared/header" %>
 
 <div class ="record-show-main">
-  <%= render "shared/meal_form" %>
   <div class="meal-index">
     <div class="total-graph-area">
       <div class="total-graph__left">
+        <%= link_to "追加", new_record_meal_path(@record.id)  %>
       </div>
       <div class="total-graph__right">
         <div class="total-data">Total カロリー
