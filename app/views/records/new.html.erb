@@ -1,0 +1,25 @@
+<%= render "shared/header" %> 
+
+<div class="record-new-main">
+  <div class="record-form-wrap">
+    <div class="record-form">
+      <%= form_with model: @record, local: true do |f| %>
+        <div class="select-date-area">
+          <div class="select-date-text">
+            記録を作成する日付を選択してください。
+          </div>
+          <div class="select-date">
+            <%= f.date_select :start_time, class: "select-date-item"%>
+          </div>
+        </div>
+        <div class="record-form-submit">
+          <%= f.submit "新規作成" ,class: "record-form-btn" %>
+          <%= link_to "戻る", root_path, class: "record-form-back" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+

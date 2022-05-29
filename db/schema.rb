@@ -10,14 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_24_085238) do
+ActiveRecord::Schema.define(version: 2022_05_26_121956) do
 
-  create_table "records", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.datetime "start_time"
-    t.integer "total_calorie"
-    t.integer "total_protein"
-    t.integer "total_fat"
-    t.integer "total_carbo"
+  create_table "meals", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "category_id", null: false
+    t.integer "eat_time_id", null: false
+    t.string "food", null: false
+    t.integer "calorie", null: false
+    t.integer "protein", null: false
+    t.integer "fat", null: false
+    t.integer "carbo", null: false
+    t.integer "volume", null: false
+    t.bigint "user_id", null: false
+    t.date "record_date_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["record_date_id"], name: "index_meals_on_record_date_id"
+    t.index ["user_id"], name: "index_meals_on_user_id"
+  end
+
+  create_table "records", primary_key: "start_time", id: :date, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "total_calorie", default: 0
+    t.integer "total_protein", default: 0
+    t.integer "total_fat", default: 0
+    t.integer "total_carbo", default: 0
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -37,5 +53,7 @@ ActiveRecord::Schema.define(version: 2022_05_24_085238) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "meals", "records", column: "record_date_id", primary_key: "start_time"
+  add_foreign_key "meals", "users"
   add_foreign_key "records", "users"
 end

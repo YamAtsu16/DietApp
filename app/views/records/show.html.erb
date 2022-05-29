@@ -1,0 +1,38 @@
+<%= render "shared/header" %>
+
+<div class ="record-show-main">
+  <%= render "shared/meal_form" %>
+  <div class="meal-index">
+    <div class="total-graph-area">
+      <div class="total-graph__left">
+      </div>
+      <div class="total-graph__right">
+        <div class="total-data">Total カロリー
+          <%= @record.total_calorie %>
+        </div>
+        <div class="total-data">Total タンパク質
+          <%= @record.total_protein %>
+        </div>
+        <div class="total-data">Total 脂質
+          <%= @record.total_fat %>
+        </div>
+        <div class="total-data">Total 炭水化物
+          <%= @record.total_carbo %>
+        </div>
+      </div>
+    </div>
+    <div class="meals-area">
+      <ul class="meal-lists">
+        <% @meals.each do |meal| %>
+          <li class="meal-list">
+            <%= "#{meal.category.name}（#{meal.eat_time.name}）" %><br>
+            <%= meal.food %><br>
+            <%= "#{meal.volume} g" %><br><br>
+            <%= link_to "編集", "#" %>
+            <%= link_to "削除", "#" %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>

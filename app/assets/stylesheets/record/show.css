@@ -1,0 +1,89 @@
+.record-show-main{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+}
+
+/* 記録フォーム */
+.meal-form-area{
+  width: 300px;
+  background-color: aqua;
+}
+
+.record-date{
+  text-align: center;
+  font-size: 25px;
+  margin-top: 10px;
+}
+
+.meal-form-content{
+  padding: 10px 50px;
+}
+
+.meal-form__title{
+  text-align: center;
+}
+
+.select-box{
+  width: 100%;
+}
+
+.select-box::placeholder{
+  text-align: right;
+  color: black;
+  margin-right: 2px;
+  font-size: 20px;
+}
+
+.meal-form-submit{
+  text-align: center;
+  margin: 50px;
+}
+
+.meal-form-submit-btn{
+  width: 100%;
+  height: 40px;
+}
+
+/* 記録表示画面 */
+.meal-index{
+  width: calc( 100% - 300px );
+}
+
+.total-graph-area{
+  width: 100%;
+  height: 400px;
+  display: flex;
+}
+
+.total-graph__left{
+  height: 100%;
+  width: 800px;
+  background-color: lightgreen;
+}
+
+.total-graph__right{
+  height: 100%;
+  width: calc( 100vw - 800px );
+  background-color: lightblue;
+}
+
+.total-data{
+  margin-left: 30px;
+}
+
+.meals-area{
+  width: 100%;
+  height: calc( 100vh - 400px );
+  padding: 10px;
+}
+
+.meal-lists{
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.meal-list{
+  border: 1px solid black;
+  padding: 10px;
+}
