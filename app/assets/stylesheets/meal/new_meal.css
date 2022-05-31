@@ -1,0 +1,46 @@
+.meal-new-main{
+  width: calc( 100vw - 700px );
+  padding: 100px 350px;
+}
+
+/* 記録フォーム */
+.meal-form-wrap{
+  width: calc( 100vw - 700px - 300px );
+  padding: 30px 150px;
+  background-color: #E6FFE9;
+}
+
+/* 日付 */
+.record-date{
+  text-align: center;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+/* 入力項目 */
+.meal-form-content{
+  margin-top: 10px;
+}
+
+.meal-form__title{
+  margin: 0 10px 5px 0;
+}
+
+.category-select, .input-food{
+  height: 30px;
+  width: 100%;
+}
+
+.input-nutrient{
+  width: 40%;
+}
+
+.meal-form-submit{
+  margin-top: 50px;
+  text-align: center;
+}
+
+.meal-form-submit-btn{
+  width: 50%;
+  height: 40px;
+}
