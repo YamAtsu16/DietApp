@@ -1,40 +1,29 @@
-<%# ヘッダー %>
-<%= render "shared/header" %>
+<%= render "shared/header_sub" %>
 
-<%# ページ全体 %>
-<div class="record-show-main">
-  <%# グラフ表示エリア %>
-  <div class="graph-area">
-    <%# 円グラフ %>
-    <div class="pie-graph-inner">
+<div class ="record-show-main">
+  <div class="meal-index">
+    <div class="total-graph-area">
+      <div class="total-graph__left">
+        <%= link_to "追加", new_record_meal_path(@record.id)  %>
+      </div>
+      <div class="total-graph__right">
+        <div class="total-data">Total カロリー
+          <%= @record.total_calorie %>
+        </div>
+        <div class="total-data">Total タンパク質
+          <%= @record.total_protein %>
+        </div>
+        <div class="total-data">Total 脂質
+          <%= @record.total_fat %>
+        </div>
+        <div class="total-data">Total 炭水化物
+          <%= @record.total_carbo %>
+        </div>
+      </div>
     </div>
-    <%# 数値 %>
-    <div class="total-data-inner">
-      <div class="total-data">Total カロリー<Br>
-        <%= @record.total_calorie %>
-      </div>
-      <div class="total-data">Total タンパク質<br>
-        <%= @record.total_protein %>
-      </div>
-      <div class="total-data">Total 脂質<br>
-        <%= @record.total_fat %>
-      </div>
-      <div class="total-data">Total 炭水化物<br>
-        <%= @record.total_carbo %>
-      </div>
-    </div>
-  </div>
-  <%# 記録表示エリア %>
-  <div class="meals-area">
-    <%# 記録の日付 %>
-    <div class="meal-date-inner">
-      <div class="meal-date">
-        <%= @record.start_time %>
-      </div>
-      <%= link_to "追加", new_record_meal_path(@record.id), class: "add-meal-btn"%>
-    </div>
-    <%# 記録カテゴリ一覧 %>
-    <div class="meals-categories">
+
+    <div class="meals-area">
+
       <div class="meals-category">
         起床時
       </div>
@@ -155,8 +144,8 @@
           <% end %>
         <% end %>
       </ul>
+
     </div>
   </div>
 </div>
-
 <%= render "shared/footer" %>

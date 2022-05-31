@@ -1,29 +1,33 @@
 <div class="header">
-  <div class="header-left">
+  <%# ヘッダーメイン %>
+  <div class="header__main">
     <div class="title-logo">
-      減量管理アプリ
+      Diet App
     </div>
+    <div class="user-info">
+      <div class="user-name">
+        ようこそ、<span class="user-name"><%= current_user.name %></span> さん
+      </div>
+      <div class="log-out">
+        <%= link_to "ログアウト", destroy_user_session_path %>
+      </div>
+    </div>
+  </div>
+  <%# ヘッダーサブ %>
+  <div class="header__sub">
     <ul class="menu-lists">
-      <li class="menu">
-        <%= link_to "新規記録", new_record_path %>
+      <li class="menu-list">
+        <%= link_to "食事記録", root_path %>
       </li>
-      <li class="menu">
-        <%= link_to "食事記録一覧", root_path %>
-      </li>
-      <li class="menu">
+      <li class="menu-list">
         <%= link_to "体重記録", "#" %>
       </li>
-      <li class="menu">
+      <li class="menu-list">
         <%= link_to "マイメニュー", "#" %>
       </li>
+      <li class="menu-list">
+        <%= link_to "ユーザー情報", "#" %>
+      </li>
     </ul>
-  </div>
-  <div class="header-right">
-    <div class="login-user">
-      <%= current_user.name %>
-    </div>
-    <div class="logout-btn">
-      <%= link_to "ログアウト", destroy_user_session_path, method: :delete%>
-    </div>
   </div>
 </div>

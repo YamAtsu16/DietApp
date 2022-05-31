@@ -1,6 +1,11 @@
+<%# ヘッダー %>
 <%= render "shared/header" %>
 
+<%# ページ全体 %>
 <div class="record-main">
+  <div class="todays-record">
+  </div>
+  <%# カレンダー %>
   <%= month_calendar events: @records do |date, records| %>
     <%= date.day %>
     <% records.each do |data| %>
@@ -12,4 +17,12 @@
       </div>
     <% end%>
   <% end %>
+  <%# 新規記録ボタン %>
+  <%= link_to new_record_path do %>
+    <div class="record-btn">
+    </div>
+  <% end%>
 </div>
+
+<%# フッター %>
+<%= render "shared/footer" %>
