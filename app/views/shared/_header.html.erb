@@ -9,7 +9,7 @@
         ようこそ、<span class="user-name"><%= current_user.name %></span> さん
       </div>
       <div class="log-out">
-        <%= link_to "ログアウト", destroy_user_session_path %>
+        <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
       </div>
     </div>
   </div>
