@@ -24,6 +24,7 @@
 
 .meal-form__title{
   margin: 0 10px 5px 0;
+  font-size: 22px;
 }
 
 .category-select, .input-food{

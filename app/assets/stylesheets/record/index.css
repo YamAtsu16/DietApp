@@ -1,23 +1,75 @@
 .record-main{
-  padding: 100px 250px;
+  padding: 150px 250px;
+}
+
+.record-header{
+  width: calc( 100% - 30px );
+  background-color: #006400;
+  color: white;
+  padding: 10px 0 10px 30px;
+  font-size: 20px;
+  letter-spacing: 3px;
 }
 
 .record-btn{
-  width: 80px;
-	height: 80px;
-	border-radius: 50%;
-	background: red;
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  margin: 0 40px 40px 0;
+  width: 200px;
+  padding: 15px 20px;
+  margin: 0 auto;
+  background-color: #FF4F02;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 5px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
 }
 
-.record-btn::after{
-  content: "+";
-  font-size: 40px;
-  color: white;
-  position: absolute;
-  top: 7px;
-  left: 27px;
+/********************
+ 今日の記録（ある場合）
+*********************/
+
+.todays-record-area{
+  width: calc( 100vw - 500px );
+  margin-bottom: 100px;
+}
+
+.todays-record{
+  width: 100%;
+  display: flex;
+  padding: 30px 0 0;
+  background-color: #FFFFEE;
+  margin-bottom: 40px;
+}
+
+/* グラフ表示 */
+.todays-record__graph{
+  width: 50%;
+}
+
+/* 数値表示 */
+.todays-record__values{
+  width: 50%;
+}
+
+.todays-record__value{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* 追加・編集ボタン */
+.todays-record-btn{
+}
+
+/***********************
+ 今日の記録（ない場合） 
+************************/
+
+.no-data{
+  padding: 40px 0;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 3px;
 }
