@@ -1,7 +1,38 @@
 .record-show-main{
   width: calc( 100vw - 300px );
   padding: 100px 150px;
+}
+
+/* データ表示エリア */
+.record-show-data{
   display: flex;
+}
+
+/* 記録の日付 */
+.meal-date-area{
+  background-color: #006699;
+  padding: 20px 40px 20px 130px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.meal-date{
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: 5px;
+  color: #FFFFEE;
+}
+
+.add-meal-btn{
+  background-color: #FF6928;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px 40px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
 }
 
 /******************************
@@ -15,59 +46,78 @@
 
 /* 円グラフ */
 .pie-graph-inner{
-  height: calc( 400px - 100px );
   width: 100%;
-  border: 1px solid;
   padding: 50px 0;
+  background-color: #FFFFEE;
 }
 
-/* データグラフ */
+/* 数値表示 */
 .total-data-inner{
-  height: 400px;
-  width: 100%;
-  padding: 50px 0;
-  border: 1px solid;
+  width: calc( 100% - 20px );
+  padding: 0 10px 80px;
+  background-color: #FFFFEE;
 }
 
-.total-data{
-  font-size: 25px;
+/* カロリー表示 */
+.total-data-calorie{
+  width: 100%;
   text-align: center;
-  margin-bottom: 20px;
+  border-bottom: 1px dashed;
+}
+
+.total-data-calorie__title{
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.total-data-calorie__value{
+  font-size: 33px;
+  margin-bottom: 10px;
+}
+
+.calorie{
+  color: #006699;
+  font-weight: 600;
+}
+
+/* 栄養素表示 */
+.total-data-nutrients{
+  width: 100%;
+  display: flex;
+  margin-top: 20px;
+}
+
+.total-data-nutrient{
+  width: 33%;
+  text-align: center;
+}
+
+.total-data-nutrient__title{
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.total-data-nutrient__value{
+  font-size: 22px;
+}
+
+.nutrient{
+  color: #006699;
+  font-weight: 600;
 }
 
 /******************************
- 記録表示エリア
+ 食事表示エリア
 *******************************/
 
 .meals-area{
   width: 50%;
 }
 
-/* 日付表示 */
-.meal-date-inner{
-  padding: 20px 20px 20px 130px;
-  border: 1px solid;
-  display: flex;
-  justify-content:space-between;
-  margin-bottom: 20px;
-}
-
-.meal-date{
-  font-size: 35px;
-  font-weight: 600;
-  letter-spacing: 5px;
-}
-
-.add-meal-btn{
-  background-color: #FF9900;
-  border-radius: 5px;
-  color: white;
-  font-size: 20px;
-  font-weight: 600;
-  padding: 10px 20px;
-  display: flex;
-  align-items: center;
-  text-decoration: none;
+.meals-categories{
+  padding-top: 20px;
 }
 
 .meals-category{
@@ -77,7 +127,7 @@
   padding: 10px 0;
   margin-bottom: 20px;
   border-bottom: 2px dashed;
-  background-color: #FFFFEE;;
+  background-color: #FFFFEE;
 }
 
 .meal-lists{
@@ -87,8 +137,26 @@
 }
 
 .meal-list{
-  border: 1px solid;
-  padding: 10px;
-  background-color: white;
+  border: 1px solid #DDDDDD;
+  padding: 10px 0;
   width: 20%;
+}
+
+.meal-food{
+  display: block;
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 3px;
+}
+
+.meal-volume{
+  display: block;
+  text-align: center;
+}
+
+.meal-edit-btn{
+  font-size: 14px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
 }

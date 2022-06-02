@@ -1,5 +1,5 @@
 .header{
-  height: 180px;
+  height: 210px;
   width: 100vw;
 }
 
@@ -19,9 +19,9 @@
 .title-logo{
   height: 100%;
   line-height: 130px;
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 600;
-  color: #DD0000;
+  color: #FF6928;
 }
 
 /* ユーザー情報 */
@@ -33,7 +33,7 @@
 }
 
 .user-name span{
-  color: #DD0000;
+  color: #FF6928;
   font-size: 30px;
   font-weight: 600;
 }
@@ -53,7 +53,7 @@
   height: 80px;
   width: calc( 100% - 300px );
   padding: 0 150px;
-  background-color: #550000;
+  background-color: #006699;
 }
 
 .menu-lists{

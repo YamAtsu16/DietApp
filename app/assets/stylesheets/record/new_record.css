@@ -7,7 +7,7 @@
 .record-form-wrap{
   width: calc( 100vw - 500px - 100px );
   padding: 0 50px;
-  background-color: #EEEEEE;
+  background-color: #FFFFEE;
 }
 
 .record-form{
@@ -48,7 +48,7 @@
   border-radius: 30px;
   color: white;
   border: none;
-  background-color: #FF9900;
+  background-color: #FF6928;
 }
 
 .record-form-back{

@@ -5,29 +5,53 @@
 <div class="record-main">
   <%# 今日の記録 %>
   <div class="todays-record-area">
-    <% if Record.exists?(start_time: Date.today)%>
+    <% if @records.exists?(start_time: Date.today)%>
       <div class="todays-record-wrap">
         <div class="record-header">
           今日の食事記録
         </div>
         <div class="todays-record">
           <%# グラフ表示エリア %>
-          <div class="todays-record__graph">
+          <div class="todays-record-graph">
             <canvas id="pie-graph"></canvas>
           </div>
           <%# 数値表示エリア %>
-          <div class="todays-record__values">
-            <div class="todays-record__value">Total カロリー
-              <%= @record.total_calorie %>
+          <div class="todays-record-data">
+            <%# カロリー表示 %>
+            <div class="todays-record-calorie">
+              <div class="todays-record-calorie__title">
+                カロリー 合計
+              </div>
+              <div class="todays-record-calorie__value">
+                <span class="calorie"><%= @record.total_calorie %></span> kcal
+              </div>
             </div>
-            <div class="todays-record__value">Total タンパク質
-              <span id="protein"><%= @record.total_protein %></span>
-            </div>
-            <div class="todays-record__value">Total 脂質
-              <span id="fat"><%= @record.total_fat %></span>
-            </div>
-            <div class="todays-record__value">Total 炭水化物
-              <span id="carbo"><%= @record.total_carbo %></span>
+            <%# 栄養素表示 %>
+            <div class="todays-record-nutrients">
+              <div class="todays-record-nutrient">
+                <div class="todays-record-nutrient__title">
+                  タンパク質  
+                </div>
+                <div class="todays-record-nutrient__value">
+                  <span class="nutrient", id="protein"><%= @record.total_protein %></span> g
+                </div>
+              </div>
+              <div class="todays-record-nutrient">
+                <div class="todays-record-nutrient__title">
+                  脂質
+                </div>
+                <div class="todays-record-nutrient__value">
+                  <span class="nutrient", id="fat"><%= @record.total_fat %></span> g
+                </div>
+              </div>
+              <div class="todays-record-nutrient">
+                <div class="todays-record-nutrient__title">
+                  炭水化物
+                </div>
+                <div class="todays-record-nutrient__value">
+                  <span class="nutrient", id="carbo"><%= @record.total_carbo %></span> g
+                </div>
+              </div>
             </div>
           </div>
         </div>
