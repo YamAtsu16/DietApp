@@ -1,5 +1,5 @@
 .header{
-  height: 180px;
+  height: 210px;
   width: 100vw;
 }
 
@@ -19,7 +19,7 @@
 .title-logo{
   height: 100%;
   line-height: 130px;
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 600;
   color: #FF6928;
 }

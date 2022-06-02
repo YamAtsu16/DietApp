@@ -20,9 +20,9 @@ function graph(){
       labels: ["タンパク質", "脂質", "炭水化物"],
       datasets: [{
           backgroundColor: [
-              "#CC0000",
+              "#FF6347",
+              "#2E8B57",
               "#FFD700",
-              "#009933",
           ],
           data: [proteinValue, fatValue, carboValue]
       }]

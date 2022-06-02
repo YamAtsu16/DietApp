@@ -44,7 +44,7 @@
 .meal-form-btn{
   display: block;
   height: 70px;
-  width: 500px;
+  width: 100%;
   margin: 0 auto;
   text-align: center;
   font-size: 30px;
