@@ -4,7 +4,7 @@
 
 .record-header{
   width: calc( 100% - 30px );
-  background-color: #006400;
+  background-color: #550000;
   color: white;
   padding: 10px 0 10px 30px;
   font-size: 20px;
@@ -15,7 +15,7 @@
   width: 200px;
   padding: 15px 20px;
   margin: 0 auto;
-  background-color: #FF4F02;
+  background-color: #FF9900;
   border-radius: 5px;
   color: white;
   font-size: 20px;
