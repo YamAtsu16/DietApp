@@ -4,6 +4,9 @@ class RecordsController < ApplicationController
 
   def index
     @records = Record.all
+    if Record.exists?(start_time: Date.today)
+      @record = Record.find(Date.today)
+    end
   end
 
   def new

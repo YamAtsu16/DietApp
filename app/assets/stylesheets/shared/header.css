@@ -21,7 +21,7 @@
   line-height: 130px;
   font-size: 50px;
   font-weight: 600;
-  color: #228B22;
+  color: #DD0000;
 }
 
 /* ユーザー情報 */
@@ -33,7 +33,7 @@
 }
 
 .user-name span{
-  color: #228B22;
+  color: #DD0000;
   font-size: 30px;
   font-weight: 600;
 }
@@ -50,10 +50,10 @@
  ヘッダーサブ
 ***************************/
 .header__sub{
-  height: 50px;
+  height: 80px;
   width: calc( 100% - 300px );
   padding: 0 150px;
-  background-color: #006400;
+  background-color: #550000;
 }
 
 .menu-lists{
@@ -63,7 +63,7 @@
 
 .menu-list{
   font-size: 25px;
-  line-height: 50px;
+  line-height: 80px;
   letter-spacing: 5px;
 }
 

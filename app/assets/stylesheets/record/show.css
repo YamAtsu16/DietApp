@@ -10,14 +10,15 @@
 
 .graph-area{
   width: 50%;
-  margin-right: 50px
+  margin-right: 50px;
 }
 
 /* 円グラフ */
 .pie-graph-inner{
-  height: 400px;
+  height: calc( 400px - 100px );
   width: 100%;
   border: 1px solid;
+  padding: 50px 0;
 }
 
 /* データグラフ */
@@ -58,7 +59,7 @@
 }
 
 .add-meal-btn{
-  background-color: #FF4F02;
+  background-color: #FF9900;
   border-radius: 5px;
   color: white;
   font-size: 20px;
@@ -76,7 +77,7 @@
   padding: 10px 0;
   margin-bottom: 20px;
   border-bottom: 2px dashed;
-  background-color: #E6FFE9;
+  background-color: #FFFFEE;;
 }
 
 .meal-lists{

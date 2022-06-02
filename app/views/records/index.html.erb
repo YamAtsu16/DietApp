@@ -3,9 +3,52 @@
 
 <%# ページ全体 %>
 <div class="record-main">
-  <div class="todays-record">
+  <%# 今日の記録 %>
+  <div class="todays-record-area">
+    <% if Record.exists?(start_time: Date.today)%>
+      <div class="todays-record-wrap">
+        <div class="record-header">
+          今日の食事記録
+        </div>
+        <div class="todays-record">
+          <%# グラフ表示エリア %>
+          <div class="todays-record__graph">
+            <canvas id="pie-graph"></canvas>
+          </div>
+          <%# 数値表示エリア %>
+          <div class="todays-record__values">
+            <div class="todays-record__value">Total カロリー
+              <%= @record.total_calorie %>
+            </div>
+            <div class="todays-record__value">Total タンパク質
+              <span id="protein"><%= @record.total_protein %></span>
+            </div>
+            <div class="todays-record__value">Total 脂質
+              <span id="fat"><%= @record.total_fat %></span>
+            </div>
+            <div class="todays-record__value">Total 炭水化物
+              <span id="carbo"><%= @record.total_carbo %></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="todays-record-btn">
+        <%= link_to "追加・編集", record_path(@record), class: "record-btn" %>
+      </div>
+    <% else %>
+      <div class="record-header">
+        今日の食事記録
+      </div>
+      <div class="no-data">
+        No Data
+      </div>
+      <%= link_to "記録作成", new_record_path, class: "record-btn" %>
+    <% end %>
   </div>
   <%# カレンダー %>
+  <div class="record-header">
+    食事記録カレンダー
+  </div>
   <%= month_calendar events: @records do |date, records| %>
     <%= date.day %>
     <% records.each do |data| %>
@@ -18,10 +61,7 @@
     <% end%>
   <% end %>
   <%# 新規記録ボタン %>
-  <%= link_to new_record_path do %>
-    <div class="record-btn">
-    </div>
-  <% end%>
+  <%= link_to "記録作成", new_record_path, class: "record-btn" %>
 </div>
 
 <%# フッター %>
