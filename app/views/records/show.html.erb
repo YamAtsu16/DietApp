@@ -7,7 +7,7 @@
   <div class="graph-area">
     <%# 円グラフ %>
     <div class="pie-graph-inner">
-      円グラフ表示
+      <canvas id="pie-graph"></canvas>
     </div>
     <%# 数値 %>
     <div class="total-data-inner">
@@ -15,13 +15,13 @@
         <%= @record.total_calorie %>
       </div>
       <div class="total-data">Total タンパク質<br>
-        <%= @record.total_protein %>
+        <span id="protein"><%= @record.total_protein %></span>
       </div>
       <div class="total-data">Total 脂質<br>
-        <%= @record.total_fat %>
+        <span id="fat"><%= @record.total_fat %><span>
       </div>
       <div class="total-data">Total 炭水化物<br>
-        <%= @record.total_carbo %>
+        <span id="carbo"><%= @record.total_carbo %></span>
       </div>
     </div>
   </div>

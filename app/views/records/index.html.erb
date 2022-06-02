@@ -13,7 +13,7 @@
         <div class="todays-record">
           <%# グラフ表示エリア %>
           <div class="todays-record__graph">
-            円グラフ表示
+            <canvas id="pie-graph"></canvas>
           </div>
           <%# 数値表示エリア %>
           <div class="todays-record__values">
@@ -21,13 +21,13 @@
               <%= @record.total_calorie %>
             </div>
             <div class="todays-record__value">Total タンパク質
-              <%= @record.total_protein %>
+              <span id="protein"><%= @record.total_protein %></span>
             </div>
             <div class="todays-record__value">Total 脂質
-              <%= @record.total_fat %>
+              <span id="fat"><%= @record.total_fat %></span>
             </div>
             <div class="todays-record__value">Total 炭水化物
-              <%= @record.total_carbo %>
+              <span id="carbo"><%= @record.total_carbo %></span>
             </div>
           </div>
         </div>
