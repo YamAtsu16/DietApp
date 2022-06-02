@@ -4,7 +4,7 @@
 
 .record-header{
   width: calc( 100% - 30px );
-  background-color: #550000;
+  background-color: #006699;
   color: white;
   padding: 10px 0 10px 30px;
   font-size: 20px;
@@ -15,7 +15,7 @@
   width: 200px;
   padding: 15px 20px;
   margin: 0 auto;
-  background-color: #FF9900;
+  background-color: #FF6928;
   border-radius: 5px;
   color: white;
   font-size: 20px;
@@ -38,28 +38,70 @@
 .todays-record{
   width: 100%;
   display: flex;
-  padding: 30px 0 0;
+  padding: 50px 0;
   background-color: #FFFFEE;
   margin-bottom: 40px;
 }
 
 /* グラフ表示 */
-.todays-record__graph{
+.todays-record-graph{
   width: 50%;
 }
 
 /* 数値表示 */
-.todays-record__values{
-  width: 50%;
+.todays-record-data{
+  width: calc( 50% - 30px );
+  padding: 0 15px;
 }
 
-.todays-record__value{
-  font-size: 20px;
+/* カロリー表示 */
+.todays-record-calorie{
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px dashed;
+}
+
+.todays-record-calorie__title{
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.todays-record-calorie__value{
+  font-size: 33px;
   margin-bottom: 10px;
 }
 
-/* 追加・編集ボタン */
-.todays-record-btn{
+.calorie{
+  color: #006699;
+  font-weight: 600;
+}
+
+/* 栄養素表示 */
+.todays-record-nutrients{
+  width: 100%;
+  display: flex;
+  margin-top: 20px;
+}
+
+.todays-record-nutrient{
+  width: 33%;
+  text-align: center;
+}
+
+.todays-record-nutrient__title{
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.todays-record-nutrient__value{
+  font-size: 22px;
+}
+
+.nutrient{
+  color: #006699;
+  font-weight: 600;
 }
 
 /***********************

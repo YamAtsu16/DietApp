@@ -3,6 +3,7 @@
 
 <%# ページ全体 %>
 <div class="record-show-main">
+
   <%# グラフ表示エリア %>
   <div class="graph-area">
     <%# 円グラフ %>
@@ -11,17 +12,41 @@
     </div>
     <%# 数値 %>
     <div class="total-data-inner">
-      <div class="total-data">Total カロリー<Br>
-        <%= @record.total_calorie %>
+      <%# カロリー表示 %>
+      <div class="total-data-calorie">
+        <div class="total-data-calorie__title">
+          カロリー 合計
+        </div>
+        <div class="total-data-calorie__value">
+          <span class="calorie"><%= @record.total_calorie %></span> kcal
+        </div>
       </div>
-      <div class="total-data">Total タンパク質<br>
-        <span id="protein"><%= @record.total_protein %></span>
-      </div>
-      <div class="total-data">Total 脂質<br>
-        <span id="fat"><%= @record.total_fat %><span>
-      </div>
-      <div class="total-data">Total 炭水化物<br>
-        <span id="carbo"><%= @record.total_carbo %></span>
+      <%# 栄養素表示 %>
+      <div class="total-data-nutrients">
+        <div class="total-data-nutrient">
+          <div class="total-data-nutrient__title">
+            タンパク質
+          </div>
+          <div class="total-data-nutrient__value">
+            <span class="nutrient", id="protein"><%= @record.total_protein %></span> g
+          </div>
+        </div>
+        <div class="total-data-nutrient">
+          <div class="total-data-nutrient__title">
+            脂質
+          </div>
+          <div class="total-data-nutrient__value">
+            <span class="nutrient", id="fat"><%= @record.total_fat %></span> g
+          </div>
+        </div>
+        <div class="total-data-nutrient">
+          <div class="total-data-nutrient__title">
+            炭水化物
+          </div>
+          <div class="total-data-nutrient__value">
+            <span class="nutrient", id="carbo"><%= @record.total_carbo %></span> g
+          </div>
+        </div>
       </div>
     </div>
   </div>
