@@ -12,8 +12,8 @@
 ## 利用方法
 ### 食事管理
   １：ユーザー登録を行う。  
-  ２：新規投稿ページから、記録を作成する日付を選択し保存ボタンを押す。  
-  ３：保存が完了すると、選択した日の詳細ページ（記録一覧と記録投稿）へ遷移される。  
+  ２：新規記録作成ページから、記録を作成する日付を選択し作成ボタンを押す。  
+  ３：作成が完了すると、選択した日の詳細ページへ遷移される。  
   ４：詳細ページにて食事記録の項目を入力し投稿することで、記録が保存、表示される。  
 ### 体重管理
   ※ 現在未実装
@@ -31,7 +31,7 @@
 ## データベース設計
   [![Image from Gyazo](https://i.gyazo.com/8da20ccd2a092d2b09584f8f06d5011e.png)](https://gyazo.com/8da20ccd2a092d2b09584f8f06d5011e)
 ## 画面遷移図
-  [![Image from Gyazo](https://i.gyazo.com/e7f7369d3e1f53dc19d831f050807b68.png)](https://gyazo.com/e7f7369d3e1f53dc19d831f050807b68)
+  [![Image from Gyazo](https://i.gyazo.com/04353711b16f56bd4a1dcd78c22096f1.png)](https://gyazo.com/04353711b16f56bd4a1dcd78c22096f1)
 ## 開発環境	
   - Ruby
   - Ruby on Rails
