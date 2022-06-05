@@ -25,7 +25,7 @@ class MealsController < ApplicationController
   private
 
   def meal_params
-    params.require(:meal).permit(:category_id, :eat_time_id, :food, :calorie, :protein, :fat, :carbo, :volume).merge(user_id: current_user.id, record_date_id: params[:record_id])
+    params.require(:meal).permit(:category_id, :food, :calorie, :protein, :fat, :carbo, :volume).merge(user_id: current_user.id, record_date_id: params[:record_id])
   end
 
   def add_data

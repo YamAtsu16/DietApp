@@ -30,10 +30,16 @@
 }
 
 .select-date{
+  height: 50px;
+  width: 100%;
   text-align: center;
 }
 
 .select-date-item{
+  height: 100%;
+  width: 30%;
+  font-size: 25px;
+  text-align: center;
 }
 
 /* 送信ボタン */

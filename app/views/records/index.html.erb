@@ -77,10 +77,10 @@
     <%= date.day %>
     <% records.each do |data| %>
       <div class="total-calories">
-        <%= "#{data.total_calorie} kcal" %>
+        <span class="total-calories-value"><%= data.total_calorie %> kcal</span>
       </div>
       <div class="total-pfc">
-        <%= link_to "詳細を見る", data %>
+        <%= link_to "詳細データ", data %>
       </div>
     <% end%>
   <% end %>
