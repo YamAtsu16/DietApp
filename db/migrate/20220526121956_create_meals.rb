@@ -9,9 +9,8 @@ class CreateMeals < ActiveRecord::Migration[6.0]
       t.integer :carbo, null: false
       t.integer :volume, null: false
       t.references :user, null: false, foreign_key: true
-      t.references :record_date, null: false, type: :date
+      t.references :record, null: false, foreign_key: true
       t.timestamps
     end
-    add_foreign_key :meals, :records, column: :record_date_id, primary_key: :start_time
   end
 end
