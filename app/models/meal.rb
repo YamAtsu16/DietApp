@@ -3,7 +3,7 @@ class Meal < ApplicationRecord
   belongs_to :category
 
   belongs_to :user
-  belongs_to :record_date, class_name: "Record", optional: true
+  belongs_to :record
 
   validates :category_id, :food, :volume, :calorie, :protein, :fat, :carbo, presence: true
   validates :calorie, :protein, :fat, :carbo, :volume, format: {with: /\A[0-9]+\z/}

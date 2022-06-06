@@ -57,6 +57,7 @@
         </div>
       </div>
       <div class="todays-record-btn">
+        <%# 既にある本日のデータへの追加・編集ボタン %>
         <%= link_to "追加・編集", record_path(@record), class: "record-btn" %>
       </div>
     <% else %>
@@ -66,6 +67,7 @@
       <div class="no-data">
         No Data
       </div>
+      <%# 新規記録ボタン %>
       <%= link_to "記録作成", new_record_path, class: "record-btn" %>
     <% end %>
   </div>

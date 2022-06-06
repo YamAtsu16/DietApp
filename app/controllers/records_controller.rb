@@ -1,11 +1,12 @@
 class RecordsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_beginning_of_week
+  before_action :get_record_current_user, only: [:index, :create]
 
   def index
-    @records = Record.all
-    if Record.exists?(start_time: Date.today)
-      @record = Record.find(Date.today)
+    # @records = current_user.records
+    if @records.exists?(start_time: Date.today)
+      @record = @records.find_by(start_time: Date.today)
     end
   end
 
@@ -15,8 +16,9 @@ class RecordsController < ApplicationController
 
   def create
     @record = Record.new(record_params)
-    if Record.exists?(start_time: @record.start_time)
-      redirect_to record_path(@record)
+    if @records.find_by(start_time: @record.start_time) != nil
+      registered_record = @records.find_by(start_time: @record.start_time)
+      redirect_to record_path(registered_record)
     else
       @record.save
       redirect_to record_path(@record)
@@ -26,7 +28,7 @@ class RecordsController < ApplicationController
   def show
     @record = Record.find(params[:id])
     @meal = Meal.new
-    @meals = @record.record_dates.all
+    @meals = @record.meals
   end
 
   private
@@ -37,5 +39,9 @@ class RecordsController < ApplicationController
 
   def set_beginning_of_week
     Date.beginning_of_week = :sunday
+  end
+
+  def get_record_current_user
+    @records = current_user.records
   end
 end
