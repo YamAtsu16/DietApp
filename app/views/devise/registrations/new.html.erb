@@ -1,41 +1,47 @@
-<div class="login-main">
-  <h2 class="login-title">新規登録画面</h2>
-  <%= form_with model: @user, url: user_registration_path, method: :post, class: 'registration-main', local: true do |f| %>
-
-    <%= render "devise/shared/error_messages", resource: resource %>
-
-    <div class="form-group">
-      <div class='form-text-wrap'>
-        <label for="name", class="form-text">ユーザー名</label>
-      </div>
-      <%= f.text_field :name, class:"input-form", id:"name", autofocus: true, maxlength:"40" %>
-    </div>
-
-    <div class="form-group">
-      <div class='form-text-wrap'>
-        <label for="email", class="form-text">メールアドレス</label>
-      </div>
-      <%= f.email_field :email, class:"input-form", id:"email", autofocus: true %>
-    </div>
-
-    <div class="form-group">
-      <div class='form-text-wrap'>
-        <label for="password", class="form-text">パスワード</label>
-      </div>
-      <%= f.password_field :password, class:"input-form", id:"password" %>
-    </div>
-
-    <div class="form-group">
-      <div class='form-text-wrap'>
-        <label for="password-confirmation", class="form-text">パスワード(確認)</label>
-      </div>
-      <%= f.password_field :password_confirmation, class:"input-form", id:"password-confirmation" %>
-    </div>
-
-    <div class="registration-submit">
-      <%= f.submit "登録する" %>
-    </div>
-  <% end %>
-
-  <%= render "devise/shared/links" %>
+<%# ヘッダー %>
+<div class="header-login">
+  Body Manager
 </div>
+<%# 新規登録画面 %>
+<div class="login-main">
+  <div class="login-wrap">
+    <h2 class="login-title">新規登録</h2>
+    <%= form_with model: @user, url: user_registration_path, method: :post, class: 'registration-main', local: true do |f| %>
+
+      <%= render "devise/shared/error_messages", resource: resource %>
+
+      <div class="form-group">
+        <div class='form-text-wrap'>
+          <label for="name", class="form-text">ユーザー名</label>
+        </div>
+        <%= f.text_field :name, class:"input-form", id:"name", autofocus: true, maxlength:"40" %>
+      </div>
+
+      <div class="form-group">
+        <div class='form-text-wrap'>
+          <label for="email", class="form-text">メールアドレス</label>
+        </div>
+        <%= f.email_field :email, class:"input-form", id:"email", autofocus: true %>
+      </div>
+
+      <div class="form-group">
+        <div class='form-text-wrap'>
+          <label for="password", class="form-text">パスワード</label>
+        </div>
+        <%= f.password_field :password, class:"input-form", id:"password" %>
+      </div>
+
+      <div class="form-group">
+        <div class='form-text-wrap'>
+          <label for="password-confirmation", class="form-text">パスワード(確認)</label>
+        </div>
+        <%= f.password_field :password_confirmation, class:"input-form", id:"password-confirmation" %>
+      </div>
+      <%= f.submit "登録", class:"login-submit"%>
+    <% end %>
+
+    <%= render "devise/shared/links" %>
+  </div>
+</div>
+<%# フッター %>
+<%= render "shared/footer" %>
