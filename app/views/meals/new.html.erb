@@ -6,6 +6,7 @@
       <%= @record.start_time %>
     </div>
     <%= form_with model: [@record, @meal], local: true do |f| %>
+    <%= render 'shared/error_messages', model: f.object %>
 
       <div class="meal-form-contents">
         <div class="meal-form-content category">

@@ -3,3 +3,12 @@ ja:
     attributes:
       user:
         name: ユーザー名
+      meal:
+        category_id: 分類
+        food: 食品名
+        volume: 摂取量
+        calorie: カロリーの値
+        protein: タンパク質の値
+        fat: 脂質の値
+        carbo: 炭水化物の値
+        

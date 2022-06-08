@@ -75,17 +75,19 @@
   <div class="record-header">
     食事記録カレンダー
   </div>
-  <%= month_calendar events: @records do |date, records| %>
-    <%= date.day %>
-    <% records.each do |data| %>
-      <div class="total-calories">
-        <span class="total-calories-value"><%= data.total_calorie %> kcal</span>
-      </div>
-      <div class="total-pfc">
-        <%= link_to "詳細データ", data %>
-      </div>
-    <% end%>
-  <% end %>
+  <div class="calendar">
+    <%= month_calendar events: @records do |date, records| %>
+      <%= date.day %>
+      <% records.each do |data| %>
+        <div class="total-calories">
+          <span class="total-calories-value"><%= data.total_calorie %> kcal</span>
+        </div>
+        <div class="total-pfc">
+          <%= link_to "詳細データ", data %>
+        </div>
+      <% end%>
+    <% end %>
+  </div>
   <%# 新規記録ボタン %>
   <%= link_to "記録作成", new_record_path, class: "record-btn" %>
 </div>

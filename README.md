@@ -1,7 +1,7 @@
 # アプリケーションについて
 
 ## アプリケーション名	
-  DietApp（仮）
+  Body Manager
 ## アプリケーション概要
   その日に食べたものの合計カロリーや栄養素、体重を投稿することができ、毎日の食事や身体のコンディションを記録することができる。
 ## URL
@@ -24,12 +24,11 @@
 ## 洗い出した要件
   こちらの[要件定義書](1IKgBYdU9itBpVNo6cb4urZDtvRVYeDn5MKTrXzAaYRc/edit#gid=982722306)に記載
   ※ 大幅な変更あり
-## 実装した機能についての画像やGIFおよびその説明
-  ※ 実装完了後、記載予定
 ## 実装予定の機能
-  ※ 食事管理機能のフロント実装
+  - 体重記録機能
+  - マイメニュー管理機能
 ## データベース設計
-  [![Image from Gyazo](https://i.gyazo.com/8da20ccd2a092d2b09584f8f06d5011e.png)](https://gyazo.com/8da20ccd2a092d2b09584f8f06d5011e)
+  [![Image from Gyazo](https://i.gyazo.com/3fc953660df228b1d331388704327d0a.png)](https://gyazo.com/3fc953660df228b1d331388704327d0a)
 ## 画面遷移図
   [![Image from Gyazo](https://i.gyazo.com/04353711b16f56bd4a1dcd78c22096f1.png)](https://gyazo.com/04353711b16f56bd4a1dcd78c22096f1)
 ## 開発環境	
@@ -39,7 +38,7 @@
   - MySQL
   - Github
   - Visual Studio Code
-## ローカルでの動作方法
-  ※ 実装後、記載予定
 ## 工夫したポイント
-  ※ 実装後、随時更新予定
+  - シンプルで分かりやすいこと
+  - 食事記録が分類別で記録できること
+  - グラフをつけることにより、見やすくしたこと
