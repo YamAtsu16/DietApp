@@ -4,7 +4,7 @@ class RecordsController < ApplicationController
   before_action :get_record_current_user, only: [:index, :create]
 
   def index
-    # @records = current_user.records
+    @records = current_user.records
     if @records.exists?(start_time: Date.today)
       @record = @records.find_by(start_time: Date.today)
     end
