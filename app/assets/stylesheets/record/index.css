@@ -41,7 +41,6 @@
   padding: 50px 0;
   background-color: #FFFFEE;
   margin-bottom: 40px;
-  box-shadow: 0px 8px 32px rgb(0 0 0 / 12%);
 }
 
 /* グラフ表示 */
@@ -117,12 +116,4 @@
   letter-spacing: 3px;
   background-color: #FFFFEE;
   margin-bottom: 50px;
-  box-shadow: 0px 8px 32px rgb(0 0 0 / 12%);
-}
-
-/*********************
- カレンダー 
-**********************/
-.calendar{
-  box-shadow: 0px 8px 32px rgb(0 0 0 / 12%);
 }
