@@ -19,7 +19,7 @@ class BodiesController < ApplicationController
   private
 
   def body_params
-    params.require(:body).permit(:weight, :image, :memo).merge(user_id: current_user.id)
+    params.require(:body).permit(:start_time, :weight, :image, :memo).merge(user_id: current_user.id)
   end
 
 end

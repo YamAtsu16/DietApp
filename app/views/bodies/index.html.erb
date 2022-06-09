@@ -1,8 +1,23 @@
 <%# ヘッダー %>
 <%= render "shared/header" %>
-<%= link_to "新規投稿", new_body_path %><br>
-<% @bodies.each do |body| %>
-  <%= body.weight %>
-<% end %>
+
+<%# ページ全体 %>
+<div class="body-main">
+  <div class="body-header">
+    体重記録カレンダー
+  </div>
+  <%= month_calendar events: @bodies do |date, bodies| %>
+    <%= date.day %>
+    <% bodies.each do |body| %>
+      <div class="weight-data">
+        <%= body.weight %> kg
+      </div>
+      <div class="body-detail">
+        <%= link_to "詳細データ", "#" %>
+      </div>
+    <% end%>
+  <% end %>
+  <%= link_to "新規投稿", new_body_path, class:"body-btn" %>
+</div>
 <%# フッター %>
 <%= render "shared/footer" %>
