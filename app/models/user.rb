@@ -6,6 +6,7 @@ class User < ApplicationRecord
 
   has_many :records
   has_many :meals
+  has_many :bodies
 
   validates :name, presence: true
 end
