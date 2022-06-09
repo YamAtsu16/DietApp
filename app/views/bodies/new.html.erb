@@ -1,0 +1,13 @@
+<%# ヘッダー %>
+<%= render "shared/header" %>
+  <%# フォーム %>
+  <%= form_with model: @body, local: true do |f| %>
+  <%# <%= render 'shared/error_messages', model: f.object %>
+    <%= f.text_field :weight %><br>
+    <%= f.file_field :image %><br>
+    <%= f.text_area :memo %><br>
+    <%= f.submit "登録" %><br>
+    <%= link_to "戻る", bodies_path %>
+  <% end %>
+<%# フッター %>
+<%= render "shared/footer" %>

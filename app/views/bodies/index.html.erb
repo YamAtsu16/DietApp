@@ -1,5 +1,8 @@
 <%# ヘッダー %>
 <%= render "shared/header" %>
-
+<%= link_to "新規投稿", new_body_path %><br>
+<% @bodies.each do |body| %>
+  <%= body.weight %>
+<% end %>
 <%# フッター %>
 <%= render "shared/footer" %>
