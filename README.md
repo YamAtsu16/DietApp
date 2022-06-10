@@ -9,6 +9,8 @@
 ## テスト用アカウント
   - Basic認証ID admin
   - Basic認証パスワード 2222
+  - ゲストログインメールアドレス guest@guest
+  - ゲストログインパスワード guest123
 ## 利用方法
 ### 食事管理
   １：ユーザー登録を行う。  
@@ -27,6 +29,15 @@
 ## 実装予定の機能
   - 体重記録機能
   - マイメニュー管理機能
+## 実装した機能についての画像やGIFおよびその説明
+### 食事管理機能の一覧画面GIF
+  [![Image from Gyazo](https://i.gyazo.com/a1731da3ca13bd657095b59c65482c4c.gif)](https://gyazo.com/a1731da3ca13bd657095b59c65482c4c)
+### 新規記録作成GIF
+  [![Image from Gyazo](https://i.gyazo.com/3db0d3eb42b5336d527d0c9a12a36bbf.gif)](https://gyazo.com/3db0d3eb42b5336d527d0c9a12a36bbf)
+### 食事記録詳細画面と新規食事記録作成GIF
+  [![Image from Gyazo](https://i.gyazo.com/d831da974465306b33256b94f5f90aef.gif)](https://gyazo.com/d831da974465306b33256b94f5f90aef)
+### 食事記録一覧画面の今日の記録表示GIF
+  [![Image from Gyazo](https://i.gyazo.com/dcef39913fb7f8d5f51beca78d973e91.gif)](https://gyazo.com/dcef39913fb7f8d5f51beca78d973e91)
 ## データベース設計
   [![Image from Gyazo](https://i.gyazo.com/3fc953660df228b1d331388704327d0a.png)](https://gyazo.com/3fc953660df228b1d331388704327d0a)
 ## 画面遷移図

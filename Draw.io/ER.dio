@@ -49,16 +49,16 @@
                 <mxCell id="88" value="・volume" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=14;" parent="84" vertex="1">
                     <mxGeometry y="80" width="160" height="20" as="geometry"/>
                 </mxCell>
-                <mxCell id="112" value="・calorie" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=14;" vertex="1" parent="84">
+                <mxCell id="112" value="・calorie" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=14;" parent="84" vertex="1">
                     <mxGeometry y="100" width="160" height="20" as="geometry"/>
                 </mxCell>
-                <mxCell id="115" value="・protein" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=14;" vertex="1" parent="84">
+                <mxCell id="115" value="・protein" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=14;" parent="84" vertex="1">
                     <mxGeometry y="120" width="160" height="20" as="geometry"/>
                 </mxCell>
-                <mxCell id="114" value="・fat" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=14;" vertex="1" parent="84">
+                <mxCell id="114" value="・fat" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=14;" parent="84" vertex="1">
                     <mxGeometry y="140" width="160" height="20" as="geometry"/>
                 </mxCell>
-                <mxCell id="113" value="・carbo" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=14;" vertex="1" parent="84">
+                <mxCell id="113" value="・carbo" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=14;" parent="84" vertex="1">
                     <mxGeometry y="160" width="160" height="20" as="geometry"/>
                 </mxCell>
                 <mxCell id="90" value="&lt;font color=&quot;#ff0000&quot;&gt;・user (FK)&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=14;" parent="84" vertex="1">
@@ -78,16 +78,16 @@
                 <mxCell id="95" value="・volume" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=14;" parent="92" vertex="1">
                     <mxGeometry y="60" width="160" height="20" as="geometry"/>
                 </mxCell>
-                <mxCell id="118" value="・calorie" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=14;" vertex="1" parent="92">
+                <mxCell id="118" value="・calorie" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=14;" parent="92" vertex="1">
                     <mxGeometry y="80" width="160" height="20" as="geometry"/>
                 </mxCell>
-                <mxCell id="119" value="・protein" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=14;" vertex="1" parent="92">
+                <mxCell id="119" value="・protein" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=14;" parent="92" vertex="1">
                     <mxGeometry y="100" width="160" height="20" as="geometry"/>
                 </mxCell>
-                <mxCell id="117" value="・fat" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=14;" vertex="1" parent="92">
+                <mxCell id="117" value="・fat" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=14;" parent="92" vertex="1">
                     <mxGeometry y="120" width="160" height="20" as="geometry"/>
                 </mxCell>
-                <mxCell id="116" value="・carbo" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=14;" vertex="1" parent="92">
+                <mxCell id="116" value="・carbo" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=14;" parent="92" vertex="1">
                     <mxGeometry y="140" width="160" height="20" as="geometry"/>
                 </mxCell>
                 <mxCell id="97" value="&lt;font color=&quot;#ff0000&quot;&gt;・user (FK)&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=14;" parent="92" vertex="1">

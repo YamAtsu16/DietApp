@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   resources :records do
     resources :meals
   end
+  resources :bodies
 end
