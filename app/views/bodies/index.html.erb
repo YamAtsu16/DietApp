@@ -13,11 +13,11 @@
         <%= body.weight %> kg
       </div>
       <div class="body-detail">
-        <%= link_to "詳細データ", "#" %>
+        <%= link_to "詳細データ", body %>
       </div>
     <% end%>
   <% end %>
-  <%= link_to "新規投稿", new_body_path, class:"body-btn" %>
+  <%= link_to "新規記録", new_body_path, class:"body-btn" %>
 </div>
 <%# フッター %>
 <%= render "shared/footer" %>

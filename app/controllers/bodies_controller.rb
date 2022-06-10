@@ -1,6 +1,6 @@
 class BodiesController < ApplicationController
   def index
-    @bodies = Body.all
+    @bodies = current_user.bodies
   end
 
   def new
@@ -14,6 +14,10 @@ class BodiesController < ApplicationController
     else
       render :new
     end
+  end
+
+  def show
+    @body = Body.find(params[:id])
   end
 
   private
