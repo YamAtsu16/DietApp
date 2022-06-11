@@ -9,7 +9,7 @@
 }
 
 /* 記録の日付 */
-.meal-date-area{
+.meal-header{
   background-color: #006699;
   padding: 20px 40px 20px 130px;
   display: flex;
