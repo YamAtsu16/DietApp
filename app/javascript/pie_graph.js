@@ -1,4 +1,4 @@
-function graph(){
+function pieGraph(){
 
   const graphId = document.getElementById("pie-graph");
 
@@ -33,4 +33,4 @@ function graph(){
 
 };
 
-window.addEventListener( 'load', graph )
+window.addEventListener( 'load', pieGraph )

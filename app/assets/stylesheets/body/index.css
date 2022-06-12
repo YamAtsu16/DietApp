@@ -32,3 +32,18 @@
   display: block;
   text-align: center;
 }
+
+.ratio{
+  font-size: 18px;
+  display: block;
+  text-align: center;
+  color: gray;
+}
+
+.ratio.increase{
+  color: rgb(255, 46, 46);
+}
+
+.ratio.decrease{
+  color: rgb(0, 186, 0);
+}

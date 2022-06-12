@@ -14,6 +14,19 @@
     <% bodies.each do |body| %>
       <div class="weight-data">
         <span class="weight-value"><%= body.weight.to_f %> kg</span>
+        <%# 体重増減比 %>
+        <% if Body.exists?(start_time: body.start_time.yesterday) %>
+          <%# 前日より減少した場合 %>
+          <% if Body.find_by(start_time: body.start_time.yesterday).weight > body.weight.to_f %>
+            <span class="ratio decrease"> -<%= (Body.find_by(start_time: body.start_time.yesterday).weight - body.weight.to_f).round(1) %></span>
+          <%# 前日より増加した場合 %>
+          <% elsif Body.find_by(start_time: body.start_time.yesterday).weight < body.weight.to_f %>
+            <span class="ratio increase"> +<%= (body.weight.to_f - Body.find_by(start_time: body.start_time.yesterday).weight).round(1) %></span>
+          <%# 変化なしの場合 %>
+          <% else %>
+            <span class="ratio"> ±0 </span>
+          <% end %>
+        <% end %>
       </div>
     <% end%>
   <% end %>
