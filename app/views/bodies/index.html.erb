@@ -6,11 +6,14 @@
   <div class="body-header">
     体重記録カレンダー
   </div>
+  <div class="body-graph">
+    <%# <canvas id="weight-graph"></canvas> %>
+  </div>
   <%= month_calendar events: @bodies do |date, bodies| %>
     <%= date.day %>
     <% bodies.each do |body| %>
       <div class="weight-data">
-        <%= body.weight %> kg
+        <span class="weight-value"><%= body.weight.to_f %> kg</span>
       </div>
     <% end%>
   <% end %>
