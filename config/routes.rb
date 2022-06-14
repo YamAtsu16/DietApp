@@ -5,4 +5,5 @@ Rails.application.routes.draw do
     resources :meals
   end
   resources :bodies, only: [:index, :new, :create]
+  resources :recipes
 end
