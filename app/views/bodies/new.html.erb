@@ -3,10 +3,8 @@
   <%# フォーム %>
   <%= form_with model: @body, local: true do |f| %>
   <%# <%= render 'shared/error_messages', model: f.object %>
-    <%= f.datetime_select :start_time %><br>
-    <%= f.text_field :weight %><br>
-    <%= f.file_field :image %><br>
-    <%= f.text_area :memo %><br>
+    <%= f.date_select :start_time %><br>
+     <%= f.number_field :weight, step: "0.1" %><br>
     <%= f.submit "登録" %><br>
     <%= link_to "戻る", bodies_path %>
   <% end %>
