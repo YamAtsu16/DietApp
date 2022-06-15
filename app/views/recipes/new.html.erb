@@ -1,0 +1,33 @@
+<%# ヘッダー %>
+<%= render "shared/header" %>
+  <%# フォーム %>
+  <%= form_with model: @recipe, local: true do |f| %>
+    <div class="recipes-form__titlle">
+      レシピ名
+    </div>
+    <%= f.text_field :recipe_name %><br>
+    <div class="recipes-form__titlle">
+      レシピ詳細
+    </div>
+    <%= f.text_area :text %><br>
+    <div class="recipes-form__titlle">
+      カロリー
+    </div>
+    <%= f.text_field :calorie %><br>
+    <div class="recipes-form__titlle">
+      タンパク質
+    </div>
+    <%= f.text_field :protein %><br>
+    <div class="recipes-form__titlle">
+      脂質
+    </div>
+    <%= f.text_field :fat %><br>
+    <div class="recipes-form__titlle">
+      炭水化物
+    </div>
+    <%= f.text_field :carbo %><br>
+    <%= f.submit "登録" %><br>
+  <% end %>
+<%= link_to "戻る", recipes_path %>
+<%# フッター %>
+<%= render "shared/footer" %>
