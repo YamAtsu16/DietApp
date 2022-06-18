@@ -1,12 +1,21 @@
 <%# ヘッダー %>
 <%= render "shared/header" %>
+<div class="body-new-main">
   <%# フォーム %>
-  <%= form_with model: @body, local: true do |f| %>
+  <%= form_with model: @body, class:"weight-form", local: true do |f| %>
   <%# <%= render 'shared/error_messages', model: f.object %>
-    <%= f.date_select :start_time %><br>
-     <%= f.number_field :weight, step: "0.1" %><br>
-    <%= f.submit "登録" %><br>
-    <%= link_to "戻る", bodies_path %>
+    <div class="select-date-text">
+      体重を記録してください
+    </div>
+    <div class="select-date">
+      <%= f.date_select :start_time, {}, {class: "select-date-item"}%>
+    </div>
+    <div class="weight-input">
+      <%= f.number_field :weight, step: "0.1", class:"weight-input-item" %><span class="kg">kg</span>
+    </div>
+    <%= f.submit "登録", class: "weight-form-btn" %>
+    <%= link_to "戻る", bodies_path, class: "weight-form-back" %>
   <% end %>
+</div>
 <%# フッター %>
 <%= render "shared/footer" %>
