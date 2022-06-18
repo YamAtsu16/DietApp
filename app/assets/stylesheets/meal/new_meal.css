@@ -8,6 +8,7 @@
   width: calc( 100vw - 700px - 300px );
   padding: 30px 150px;
   background-color: #FFFFEE;
+  box-shadow: 10px 10px 15px -10px;
 }
 
 /* 日付 */

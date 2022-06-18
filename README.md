@@ -34,7 +34,7 @@
   - 体重記録機能
   - マイメニュー管理機能
 ## 実装した機能についての画像やGIFおよびその説明
-### 食事管理機能の一覧画面GIF
+### 食事記録一覧画面GIF
   [![Image from Gyazo](https://i.gyazo.com/a1731da3ca13bd657095b59c65482c4c.gif)](https://gyazo.com/a1731da3ca13bd657095b59c65482c4c)
   - 食事管理一覧画面には今日のデータと過去の記録がカレンダーで表示されている
   - 今日の記録がまだ作成されていない場合、「NoData」と表示される
@@ -51,6 +51,10 @@
   [![Image from Gyazo](https://i.gyazo.com/dcef39913fb7f8d5f51beca78d973e91.gif)](https://gyazo.com/dcef39913fb7f8d5f51beca78d973e91)
   - 食事管理一覧画面にて、今日の記録が存在する場合は、「NoData」の表示から、今日の記録データの表示に切り替わる
   - 今日の記録表示の下部にある追加・編集ボタンを押すと、今日の記録詳細画面に遷移する
+### 体重記録一覧画面GIF
+  [![Image from Gyazo](https://i.gyazo.com/725ca4f266333dcccfa88d47c50e3a5e.png)](https://gyazo.com/725ca4f266333dcccfa88d47c50e3a5e)
+  - 記録がカレンダー形式で表示される
+  - 前日の記録が存在する場合は、増減比が表示される
 ## データベース設計
   [![Image from Gyazo](https://i.gyazo.com/aef5556d1f651210edcbfa1d59a18e13.png)](https://gyazo.com/aef5556d1f651210edcbfa1d59a18e13)
 ## 画面遷移図
