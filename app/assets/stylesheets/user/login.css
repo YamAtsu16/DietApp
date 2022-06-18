@@ -18,6 +18,7 @@
 
 .login-wrap{
   background-color: #FFFFEE;
+  box-shadow: 10px 10px 15px -10px;
 }
 
 .login-title{
