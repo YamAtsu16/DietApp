@@ -2,6 +2,11 @@
 <%= render "shared/header" %>
   <%# フォーム %>
   <%= form_with model: @recipe, local: true do |f| %>
+    <div class="">
+      レシピ画像
+    </div>
+    <%= f.file_field :image %><br>
+    </div>
     <div class="recipes-form__titlle">
       レシピ名
     </div>

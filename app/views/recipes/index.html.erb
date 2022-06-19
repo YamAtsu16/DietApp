@@ -1,6 +1,12 @@
 <%# ヘッダー %>
 <%= render "shared/header" %>
-マイレシピ一覧
+
+<% @recipes.each do|recipe| %>
+  <%= image_tag recipe.image %><br>
+  <%= recipe.recipe_name %><br>
+<% end %>
+
 <%= link_to "マイレシピ投稿", new_recipe_path %>
+
 <%# フッター %>
 <%= render "shared/footer" %>
