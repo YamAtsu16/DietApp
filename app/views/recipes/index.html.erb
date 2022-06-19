@@ -1,12 +1,27 @@
 <%# ヘッダー %>
 <%= render "shared/header" %>
 
-<% @recipes.each do|recipe| %>
-  <%= image_tag recipe.image %><br>
-  <%= recipe.recipe_name %><br>
-<% end %>
-
-<%= link_to "マイレシピ投稿", new_recipe_path %>
+<div class="recipe-main">
+  <div class="recipe-header">
+    マイレシピ一覧
+  </div>
+  <ul class="recipe-lists">
+    <% @recipes.each do|recipe| %>
+      <li class="recipe-list">
+        <div class="recipe-image-wrap">
+          <%= image_tag recipe.image, class:"recipe-image" %>
+        </div>
+        <div class="recipe-name">
+          <%= recipe.recipe_name %>
+        </div>
+        <div class="recipe-calorie">
+          （ <%= "#{recipe.calorie} kcal" %> ）
+        </div>
+      </li>
+    <% end %>
+  </ul>
+  <%= link_to "マイレシピ投稿", new_recipe_path, class:"recipe-btn" %>
+</div>
 
 <%# フッター %>
 <%= render "shared/footer" %>
