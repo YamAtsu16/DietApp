@@ -1,38 +1,44 @@
 <%# ヘッダー %>
 <%= render "shared/header" %>
+<div class="recipe-new-main">
   <%# フォーム %>
-  <%= form_with model: @recipe, local: true do |f| %>
-    <div class="">
-      レシピ画像
-    </div>
-    <%= f.file_field :image %><br>
-    </div>
-    <div class="recipes-form__titlle">
-      レシピ名
-    </div>
-    <%= f.text_field :recipe_name %><br>
-    <div class="recipes-form__titlle">
-      レシピ詳細
-    </div>
-    <%= f.text_area :text %><br>
-    <div class="recipes-form__titlle">
-      カロリー
-    </div>
-    <%= f.text_field :calorie %><br>
-    <div class="recipes-form__titlle">
-      タンパク質
-    </div>
-    <%= f.text_field :protein %><br>
-    <div class="recipes-form__titlle">
-      脂質
-    </div>
-    <%= f.text_field :fat %><br>
-    <div class="recipes-form__titlle">
-      炭水化物
-    </div>
-    <%= f.text_field :carbo %><br>
-    <%= f.submit "登録" %><br>
-  <% end %>
-<%= link_to "戻る", recipes_path %>
+  <div class="recipe-form-wrap">
+    <%= form_with model: @recipe, local: true do |f| %>
+      <div class="recipe-new-text">
+        マイレシピ
+      </div>
+      <div class="recipe-image-text">
+        写真をアップロードしてください
+      </div>
+      <%= f.file_field :image, class:"recipe-new-image"%>
+      <div class="recipes-form__titlle">
+        レシピ名
+      </div>
+      <%= f.text_field :recipe_name %><br>
+      <div class="recipes-form__titlle">
+        レシピ詳細
+      </div>
+      <%= f.text_area :text, placeholder:"材料、作り方を記載してください", class:"recipe-textarea"%><br>
+      <div class="recipes-form__titlle">
+        カロリー(kcal)
+      </div>
+      <%= f.text_field :calorie %><br>
+      <div class="recipes-form__titlle">
+        タンパク質(g)
+      </div>
+      <%= f.text_field :protein %><br>
+      <div class="recipes-form__titlle">
+        脂質(g)
+      </div>
+      <%= f.text_field :fat %><br>
+      <div class="recipes-form__titlle">
+        炭水化物(g)
+      </div>
+      <%= f.text_field :carbo %><br>
+      <%= f.submit "登録", class:"recipe-form-btn" %><br>
+    <% end %>
+    <%= link_to "戻る", recipes_path, class: "recipe-form-back"%>
+  </div>
+</div>
 <%# フッター %>
 <%= render "shared/footer" %>
